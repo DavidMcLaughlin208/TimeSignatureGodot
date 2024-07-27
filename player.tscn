@@ -1,0 +1,34 @@
+[gd_scene load_steps=6 format=3 uid="uid://1kqaqgau6caa"]
+
+[ext_resource type="Script" path="res://player.gd" id="1_2edqq"]
+[ext_resource type="Texture2D" uid="uid://bu8k3xunyry0q" path="res://assets/PNG/Default (64px)/Characters/red_character.png" id="1_crv46"]
+[ext_resource type="Texture2D" uid="uid://xaexrfhht0qk" path="res://assets/PNG/Default (64px)/Items/weapon_dagger.png" id="2_o4lgy"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_11rcd"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_44hv3"]
+radius = 19.0263
+
+[node name="Player" type="CharacterBody2D" groups=["player"]]
+motion_mode = 1
+script = ExtResource("1_2edqq")
+
+[node name="Gun" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_11rcd")
+
+[node name="Sprite2D" type="Sprite2D" parent="Gun"]
+position = Vector2(20, -5.96046e-08)
+rotation = 1.5708
+scale = Vector2(0.359375, 0.484375)
+texture = ExtResource("2_o4lgy")
+metadata/_edit_group_ = true
+
+[node name="Barrel" type="Marker2D" parent="Gun"]
+position = Vector2(30, 0)
+rotation = 1.5708
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_crv46")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_44hv3")

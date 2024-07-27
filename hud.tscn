@@ -1,0 +1,24 @@
+[gd_scene load_steps=2 format=3 uid="uid://bapcnrhp5af2q"]
+
+[ext_resource type="Script" path="res://hud.gd" id="1_fos0c"]
+
+[node name="HUD" type="CanvasLayer"]
+script = ExtResource("1_fos0c")
+
+[node name="TimeStateLabel" type="Label" parent="."]
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -40.0
+offset_bottom = 23.0
+grow_horizontal = 0
+
+[node name="TimeScaleLabel" type="Label" parent="."]
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -91.0
+offset_top = 1.0
+offset_right = -51.0
+offset_bottom = 24.0
+grow_horizontal = 0

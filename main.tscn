@@ -1,0 +1,23 @@
+[gd_scene load_steps=5 format=3 uid="uid://bdkyjtrxhi6qe"]
+
+[ext_resource type="TileSet" uid="uid://gnnh2h56oltt" path="res://main.tres" id="1_ds8g8"]
+[ext_resource type="PackedScene" uid="uid://1kqaqgau6caa" path="res://player.tscn" id="2_ltl65"]
+[ext_resource type="PackedScene" uid="uid://bapcnrhp5af2q" path="res://hud.tscn" id="3_swg7j"]
+[ext_resource type="PackedScene" uid="uid://uped1rxnwp2k" path="res://enemy.tscn" id="4_bcrbg"]
+
+[node name="Main" type="Node"]
+
+[node name="TileMap" type="TileMap" parent="."]
+position = Vector2(372, 435)
+tile_set = ExtResource("1_ds8g8")
+format = 2
+layer_0/name = "mainlayer"
+layer_0/tile_data = PackedInt32Array(-393222, 131072, 0, -458751, 131072, 1342177280, -196607, 131072, 805306368, -131078, 131072, 1610612736, -393221, 196608, 0, -393220, 196608, 0, -393219, 196608, 0, -393218, 196608, 0, -393217, 196608, 0, -458752, 196608, 0, -393215, 196608, 1342177280, -327679, 196608, 1342177280, -262143, 196608, 1342177280, -196608, 196608, 805306368, -131073, 196608, 805306368, -131074, 196608, 805306368, -131075, 196608, 805306368, -131076, 196608, 805306368, -131077, 196608, 805306368, -196614, 196608, 1610612736, -262150, 196608, 1610612736, -327686, 196608, 1610612736, -327685, 0, 1, -327684, 0, 1, -262147, 0, 1, -262146, 0, 1, -262145, 0, 1, -327681, 0, 1, -327682, 0, 1, -327683, 0, 1, -262148, 0, 1, -262149, 0, 1, -196613, 0, 1, -196612, 0, 1, -196611, 0, 1, -196610, 0, 1, -196609, 0, 1, -327680, 0, 1, -393216, 0, 1, -262144, 0, 1)
+
+[node name="Player" parent="." instance=ExtResource("2_ltl65")]
+position = Vector2(252, 146)
+
+[node name="HUD" parent="." instance=ExtResource("3_swg7j")]
+
+[node name="Enemy" parent="." instance=ExtResource("4_bcrbg")]
+position = Vector2(397, 236)
