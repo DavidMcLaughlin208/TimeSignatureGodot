@@ -31,3 +31,6 @@ shape = SubResource("CircleShape2D_vdlr0")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 texture = ExtResource("1_6k0ji")
+
+[node name="NavigationAgent2D" type="NavigationAgent2D" parent="."]
+path_postprocessing = 1

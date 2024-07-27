@@ -27,8 +27,6 @@ func save_snapshot():
 		snapshots.pop_front()
 
 func apply_snapshot(snapshot1: Dictionary, snapshot2: Dictionary, lerpValue: float):
-	if len(snapshots) <= 3:
-		prints("last")
 	position = snapshot1["position"].lerp(snapshot2["position"], lerpValue)
 	rotation = lerp(snapshot1["rotation"], snapshot2["rotation"], lerpValue)
 	if Globals.is_pop_frame():
@@ -46,7 +44,6 @@ func change_state_on_hit():
 func update_trail_position():
 	$Trail.points.set(0, global_position)
 	$Trail.points.set(1, origin_point)
-	prints($Trail.points)
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):

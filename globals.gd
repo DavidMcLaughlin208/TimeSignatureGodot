@@ -29,7 +29,6 @@ func set_time(new_timestate: TimeState, new_timescale: float):
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
-	print(timescaleAccumulator)
 	if timescaleAccumulator >= 1.0:
 		timescaleAccumulator = 0
 		

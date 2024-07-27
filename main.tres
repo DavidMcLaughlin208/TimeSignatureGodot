@@ -1,6 +1,13 @@
-[gd_resource type="TileSet" load_steps=5 format=3 uid="uid://gnnh2h56oltt"]
+[gd_resource type="TileSet" load_steps=6 format=3 uid="uid://gnnh2h56oltt"]
 
 [ext_resource type="Texture2D" uid="uid://c88qplvbqvpc5" path="res://assets/Tilesheet/tilesheet.png" id="1_mfn4f"]
+
+[sub_resource type="NavigationPolygon" id="NavigationPolygon_bi0mc"]
+vertices = PackedVector2Array(32, 32, -32, 32, -32, -32, 32, -32)
+polygons = Array[PackedInt32Array]([PackedInt32Array(0, 1, 2, 3)])
+outlines = Array[PackedVector2Array]([PackedVector2Array(-32, -32, 32, -32, 32, 32, -32, 32)])
+source_geometry_group_name = &"navigation_polygon_source_group"
+agent_radius = 0.0
 
 [sub_resource type="NavigationPolygon" id="NavigationPolygon_u4gbe"]
 vertices = PackedVector2Array(32, 32, -1, 32, 0, 1, 32, 0)
@@ -68,6 +75,7 @@ texture_region_size = Vector2i(64, 64)
 0:1/0 = 0
 0:1/0/physics_layer_0/linear_velocity = Vector2(0, 0)
 0:1/0/physics_layer_0/angular_velocity = 0.0
+0:1/0/navigation_layer_0/polygon = SubResource("NavigationPolygon_bi0mc")
 1:1/0 = 0
 1:1/0/physics_layer_0/linear_velocity = Vector2(0, 0)
 1:1/0/physics_layer_0/angular_velocity = 0.0
